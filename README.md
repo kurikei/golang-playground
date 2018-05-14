@@ -1,1 +1,2 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a8db2d31b9fa3f00486a/maintainability)](https://codeclimate.com/github/kurikei/golang-sandbox/maintainability)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/acccb3c6edd04fcc8c47430d9f27ba30)](https://www.codacy.com/app/kurikei/golang-sandbox?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kurikei/golang-sandbox&amp;utm_campaign=Badge_Grade)
