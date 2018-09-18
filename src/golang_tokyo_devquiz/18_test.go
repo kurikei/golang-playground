@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"reflect"
 	"testing"
@@ -11,12 +12,17 @@ import (
 // 変更するのはSetの内部だけ。
 func Set(p, v interface{}) error {
 	pv := reflect.ValueOf(p)
-	// TODO: pがポインタかどうかKindをチェック
+	if pv.Kind() != reflect.Ptr {
+		return errors.New("p is not a pointer.")
+	}
 
 	vv := reflect.ValueOf(v)
-	// TODO： pに値がセットできるかつ、pの先にvが代入できるかチェック
-	// ヒント1： https://golang.org/pkg/reflect/#Type のAssignableTo
-	// ヒント2: https://golang.org/pkg/reflect/#Value.CanSet
+	if !reflect.ValueOf(p).Elem().CanSet() {
+		return errors.New("cannot assign value to p.")
+	}
+	if !reflect.TypeOf(v).AssignableTo(reflect.TypeOf(p).Elem()) {
+		return errors.New("cannot assign v to p.")
+	}
 
 	// Elemでポインタの指してる先を取得して代入
 	pv.Elem().Set(vv)
