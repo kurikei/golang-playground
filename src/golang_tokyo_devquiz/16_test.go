@@ -9,7 +9,7 @@ type Hex int
 
 // テストが通るように以下のメソッドを修正させてください
 func (h Hex) String() string {
-	return fmt.Sprintf("%x", h)
+	return fmt.Sprintf("%x", string(h))
 }
 
 // テストは変更しないでください
