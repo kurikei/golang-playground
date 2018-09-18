@@ -5,8 +5,8 @@ import "testing"
 type MyInt int
 
 // テストが通るように以下のメソッドを修正させてください
-func (n MyInt) Inc() {
-	n++
+func (n *MyInt) Inc() {
+	*n++
 }
 
 // テストは変更しないで下さい
