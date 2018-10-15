@@ -32,6 +32,7 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// Get
 	var messages map[string]Message
 	err = client.NewRef("messages").Get(ctx, &messages)
 	if err != nil {
@@ -40,5 +41,15 @@ func main() {
 
 	for key, message := range messages {
 		log.Printf("%s: %+v\n", key, message)
+	}
+
+	// Push
+	newMessage := Message{
+		Name: "golang client",
+		Text: "this is message by golang client",
+	}
+	_, err = client.NewRef("messages").Push(ctx, newMessage)
+	if err != nil {
+		log.Fatal(err)
 	}
 }
