@@ -6,3 +6,28 @@ type room struct {
 	leave   chan *client
 	clients map[*client]bool
 }
+
+func (r *room) run() {
+	for {
+		// forward, join, leave の3つのチャネルを監視する
+		select {
+		case client := <-r.join:
+			r.clients[client] = true
+		case client := <-r.leave:
+			delete(r.clients, client)
+			close(client.send)
+		case msg := <-r.forward:
+			for client := range r.clients {
+				select {
+				case client.send <- msg:
+					// メッセージを送信
+				default:
+					// 送信に失敗
+					delete(r.clients, client)
+					close(client.send)
+
+				}
+			}
+		}
+	}
+}
