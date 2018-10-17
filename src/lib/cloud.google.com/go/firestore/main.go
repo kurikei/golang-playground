@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/firestore"
+	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
 )
 
@@ -28,6 +29,7 @@ func main() {
 	}
 	defer client.Close()
 
+	// メッセージを追加する
 	newMessage := Message{
 		Name: "Firestore Golang Library",
 		Text: fmt.Sprintf("This is message by %v", time.Now().Unix()),
@@ -35,5 +37,18 @@ func main() {
 	_, _, err = client.Collection("messages").Add(ctx, &newMessage)
 	if err != nil {
 		log.Fatalf("Failed adding alovelace: %v", err)
+	}
+
+	// メッセージを取得する
+	iter := client.Collection("messages").Documents(ctx)
+	for {
+		doc, err := iter.Next()
+		if err == iterator.Done {
+			break
+		}
+		if err != nil {
+			log.Fatalf("Failed to iterate: %v", err)
+		}
+		fmt.Println(doc.Data())
 	}
 }
