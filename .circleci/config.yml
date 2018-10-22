@@ -1,0 +1,27 @@
+version: 2
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - lint
+
+
+default_image: &default_image
+  docker:
+    - image:  circleci/golang:1-stretch
+      environment:
+        GOPATH: /home/circleci/project
+        SRC_PATH: src/golang-sandbox
+
+jobs:
+  lint:
+    <<: *default_image
+    steps:
+      - checkout
+      - run: cd $SRC_PATH && dep ensure -vendor-only
+      - type: cache-save
+        key: dep-cache-{{ checksum "src/golang-sandbox/Gopkg.lock" }}
+        paths:
+          - ${SRC_PATH}/vendor
+      - run: RESULT=$(gofmt -d -s ${SRC_PATH}/lib/) && echo "${RESULT}"; ! [ -n "${RESULT}" ]
