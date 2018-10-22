@@ -5,7 +5,8 @@ import (
 	"regexp"
 )
 
-const src =  "google.com"
+const src = "google.com"
+
 var (
 	regMatch    = regexp.MustCompile("o+")
 	regNotMatch = regexp.MustCompile("hogefugapiyo")
