@@ -24,11 +24,13 @@ jobs:
           command: echo "PATH=$GOPATH/bin:$PATH" >> $BASH_ENV
       - run:
           name: install go packages for CI
-          command: go get -u golang.org/x/lint/golint
+          command: go get -u golang.org/x/lint/golint github.com/haya14busa/reviewdog/cmd/reviewdog
       - run: cd $SRC_PATH && dep ensure -vendor-only
       - type: cache-save
         key: dep-cache-{{ checksum "src/golang-sandbox/Gopkg.lock" }}
         paths:
           - ${SRC_PATH}/vendor
       - run: RESULT=$(gofmt -d -s ${SRC_PATH}/lib/) && echo "${RESULT}"; ! [ -n "${RESULT}" ]
-      - run: golint -set_exit_status ${SRC_PATH}/lib/...
+      - run:
+          name: run reviewdog
+          command: bin/ci/reviewdog.sh -reporter=github-pr-review
