@@ -44,6 +44,7 @@ func getClient(ctx context.Context) (*storage.Client, error) {
 	return client, nil
 }
 
+// GCSBucket は Google Cloud Storage のバケットを表すstruct
 type GCSBucket struct {
 	handle *storage.BucketHandle
 }
