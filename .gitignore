@@ -1,1 +1,6 @@
 vendor
+bin/*
+!bin/ci/
+pkg
+src
+!src/golang-sandbox/
