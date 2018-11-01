@@ -2,5 +2,5 @@ vendor
 bin/*
 !bin/ci/
 pkg
-src
+src/*
 !src/golang-sandbox/
