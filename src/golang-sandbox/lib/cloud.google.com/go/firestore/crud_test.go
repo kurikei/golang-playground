@@ -3,7 +3,9 @@ package main
 import (
 	"context"
 	"testing"
+	"time"
 
+	"cloud.google.com/go/firestore"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
@@ -12,6 +14,17 @@ import (
 
 type User struct {
 	Name string `firestore:"name,omitempty"`
+}
+
+type Type struct {
+	String string                 `firestore:"string,omitempty"`
+	Bool   bool                   `firestore:"bool,omitempty"`
+	Float  float64                `firestore:"float,omitempty"`
+	Time   time.Time              `firestore:"time,omitempty"`
+	Array  []interface{}          `firestore:"array,omitempty"`
+	Null   interface{}            `firestore:"null,omitempty"`
+	Map    map[string]interface{} `firestore:"map,omitempty"`
+	DocRef *firestore.DocumentRef `firestore:"doc_ref,omitempty"`
 }
 
 func TestDocumentCRUD(t *testing.T) {
@@ -84,4 +97,44 @@ func TestCollectionNewDoc(t *testing.T) {
 	actual := &User{}
 	d.DataTo(actual)
 	require.Equal(t, u.Name, actual.Name)
+}
+
+func TestType(t *testing.T) {
+	ctx := context.Background()
+
+	client, err := createClient(ctx)
+	if err != nil {
+		t.Fatalf("Failed to create client: %v", err)
+	}
+	defer client.Close()
+
+	// 参照型を確かめるために user ドキュメントのを作成する
+	u := &User{Name: "Tom"}
+	uDocRef, _, err := client.Collection("users").Add(ctx, u)
+	assert.NoError(t, err)
+
+	typeObj := &Type{
+		String: "hoge",
+		Bool:   true,
+		Float:  3.14,
+		Time:   time.Now(),
+		Array:  []interface{}{1, "string", true},
+		Null:   nil,
+		Map:    map[string]interface{}{"key": "value"},
+		DocRef: uDocRef,
+	}
+	typeRef, _, err := client.Collection("types").Add(ctx, typeObj)
+	assert.NoError(t, err)
+
+	// firestoreから取得したデータの参照から実態が引いてこれるか確認
+	ts, err := typeRef.Get(ctx)
+	assert.NoError(t, err)
+	newType := &Type{}
+	err = ts.DataTo(newType)
+	assert.NoError(t, err)
+
+	actualUser := &User{}
+	us, err := newType.DocRef.Get(ctx)
+	us.DataTo(actualUser)
+	require.Equal(t, u.Name, actualUser.Name)
 }
