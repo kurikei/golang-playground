@@ -4,12 +4,9 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"os"
 	"time"
 
-	"cloud.google.com/go/firestore"
 	"google.golang.org/api/iterator"
-	"google.golang.org/api/option"
 )
 
 // Message はチャットのメッセージを表すstruct
@@ -21,10 +18,7 @@ type Message struct {
 func main() {
 	ctx := context.Background()
 
-	projectID := os.Getenv("PROJECT_ID")
-	opt := option.WithCredentialsFile(os.Getenv("GCLOUD_CRENTIAL_FILE_PATH"))
-
-	client, err := firestore.NewClient(ctx, projectID, opt)
+	client, err := createClient(ctx)
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
 	}
