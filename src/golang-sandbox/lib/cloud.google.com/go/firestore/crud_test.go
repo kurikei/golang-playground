@@ -64,3 +64,24 @@ func TestDocumentCRUD(t *testing.T) {
 	require.Equal(t, status.Code(err), codes.NotFound)
 	require.False(t, d.Exists())
 }
+
+func TestCollectionNewDoc(t *testing.T) {
+	ctx := context.Background()
+
+	client, err := createClient(ctx)
+	if err != nil {
+		t.Fatalf("Failed to create client: %v", err)
+	}
+	defer client.Close()
+
+	dRef := client.Collection("users").NewDoc()
+	u := &User{Name: "Alice"}
+	_, err = dRef.Set(ctx, u)
+	assert.NoError(t, err)
+
+	d, err := client.Collection("users").Doc(dRef.ID).Get(ctx)
+	assert.NoError(t, err)
+	actual := &User{}
+	d.DataTo(actual)
+	require.Equal(t, u.Name, actual.Name)
+}
