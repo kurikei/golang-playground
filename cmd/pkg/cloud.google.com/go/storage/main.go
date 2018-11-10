@@ -9,7 +9,6 @@ import (
 	"os"
 
 	"cloud.google.com/go/storage"
-	"github.com/pkg/errors"
 	"google.golang.org/api/option"
 )
 
@@ -39,7 +38,7 @@ func getClient(ctx context.Context) (*storage.Client, error) {
 	opt := option.WithCredentialsFile(os.Getenv("GCLOUD_CRENTIAL_FILE_PATH"))
 	client, err := storage.NewClient(ctx, opt)
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("Failed to create client: %v", err))
+		return nil, fmt.Errorf("Failed to create client: %v", err)
 	}
 	return client, nil
 }
@@ -52,18 +51,18 @@ type GCSBucket struct {
 func createBucket(ctx context.Context) (*GCSBucket, error) {
 	client, err := getClient(ctx)
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("Failed to get client: %v", err))
+		return nil, fmt.Errorf("Failed to get client: %v", err)
 	}
 
 	bucket := client.Bucket("go-client-sandbox")
 	attr, err := bucket.Attrs(ctx)
 	if err != nil {
-		return nil, errors.New(fmt.Sprintf("Failed to get bucket attributes: %v", err))
+		return nil, fmt.Errorf("Failed to get bucket attributes: %v", err)
 	}
 	// Create Bucket if not exist
 	if attr == nil {
 		if err := bucket.Create(ctx, projectID, nil); err != nil {
-			return nil, errors.New(fmt.Sprintf("Failed to create bucket: %v", err))
+			return nil, fmt.Errorf("Failed to create bucket: %v", err)
 		}
 	}
 
@@ -73,13 +72,13 @@ func createBucket(ctx context.Context) (*GCSBucket, error) {
 func (b *GCSBucket) upload(ctx context.Context, filepath, name string) error {
 	file, err := ioutil.ReadFile(filepath)
 	if err != nil {
-		return errors.New(fmt.Sprintf("Failed to open file: %v", err))
+		return fmt.Errorf("Failed to open file: %v", err)
 	}
 
 	object := b.handle.Object(name)
 	objectWriter := object.NewWriter(ctx)
 	if _, err := objectWriter.Write(file); err != nil {
-		return errors.New(fmt.Sprintf("Failed to upload: %v", err))
+		return fmt.Errorf("Failed to upload: %v", err)
 	}
 	defer objectWriter.Close()
 
@@ -90,20 +89,20 @@ func (b *GCSBucket) download(ctx context.Context, name, filepath string) error {
 	object := b.handle.Object(name)
 	objectReader, err := object.NewReader(ctx)
 	if err != nil {
-		return errors.New(fmt.Sprintf("Failed to download: %v", err))
+		return fmt.Errorf("Failed to download: %v", err)
 	}
 	defer objectReader.Close()
 
 	file, err := os.Create(filepath)
 	if err != nil {
-		return errors.New(fmt.Sprintf("Failed to create file: %v", err))
+		return fmt.Errorf("Failed to create file: %v", err)
 	}
 	defer file.Close()
 
 	r := bufio.NewReader(objectReader)
 	_, err = r.WriteTo(file)
 	if err != nil {
-		return errors.New(fmt.Sprintf("Failed to write file: %v", err))
+		return fmt.Errorf("Failed to write file: %v", err)
 	}
 
 	return nil

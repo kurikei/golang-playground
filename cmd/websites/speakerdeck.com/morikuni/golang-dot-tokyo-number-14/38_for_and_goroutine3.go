@@ -9,7 +9,6 @@ import (
 func main() {
 	// creating huge slice
 	xs := []int{1, 2, 3, 4, 5}
-	}
 
 	var wg sync.WaitGroup
 	wg.Add(len(xs))
