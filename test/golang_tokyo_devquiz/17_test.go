@@ -25,7 +25,7 @@ func IsAllEven(ns ...int) error {
 	return err
 }
 
-func Test(t *testing.T) {
+func TestGolangTokyoDevQuiz17(t *testing.T) {
 	cases := map[string]struct {
 		ns       []int
 		hasError bool

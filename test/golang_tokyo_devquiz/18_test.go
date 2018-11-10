@@ -13,15 +13,15 @@ import (
 func Set(p, v interface{}) error {
 	pv := reflect.ValueOf(p)
 	if pv.Kind() != reflect.Ptr {
-		return errors.New("p is not a pointer.")
+		return errors.New("p is not a pointer")
 	}
 
 	vv := reflect.ValueOf(v)
 	if !reflect.ValueOf(p).Elem().CanSet() {
-		return errors.New("cannot assign value to p.")
+		return errors.New("cannot assign value to p")
 	}
 	if !reflect.TypeOf(v).AssignableTo(reflect.TypeOf(p).Elem()) {
-		return errors.New("cannot assign v to p.")
+		return errors.New("cannot assign v to p")
 	}
 
 	// Elemでポインタの指してる先を取得して代入
@@ -36,7 +36,7 @@ func (n myint) String() string {
 	return fmt.Sprint(int(n))
 }
 
-func TestSet(t *testing.T) {
+func TestGolangTokyoDevQuiz18(t *testing.T) {
 	var (
 		v1 int
 		v2 fmt.Stringer
