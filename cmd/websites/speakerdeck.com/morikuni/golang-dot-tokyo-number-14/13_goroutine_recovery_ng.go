@@ -13,7 +13,7 @@ func main() {
 	done := make(chan struct{})
 
 	go func() {
-		panic("panic occured!")
+		panic("panic occurred!")
 		close(done)
 	}()
 	<-done

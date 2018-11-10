@@ -39,6 +39,6 @@ func main() {
 
 	fmt.Println(<-ch)
 	printGoroutineNum()
-	// goroutine leak occured
+	// goroutine leak occurred
 	// 参照：https://qiita.com/i_yudai/items/3336a503079ac5749c35
 }
