@@ -1,0 +1,2 @@
+ignore:
+  - "copy_reference/**"

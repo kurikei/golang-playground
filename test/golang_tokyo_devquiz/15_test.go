@@ -10,7 +10,7 @@ func (n *MyInt) Inc() {
 }
 
 // テストは変更しないで下さい
-func TestMyInt_Inc(t *testing.T) {
+func TestGolangTokyoDevQuiz15(t *testing.T) {
 	var n MyInt
 	n.Inc()
 	if n != 1 {

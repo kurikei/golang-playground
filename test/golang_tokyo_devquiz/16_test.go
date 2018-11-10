@@ -13,7 +13,7 @@ func (h Hex) String() string {
 }
 
 // テストは変更しないでください
-func Test(t *testing.T) {
+func TestGolangTokyoDevQuiz16(t *testing.T) {
 	cases := map[string]struct {
 		h Hex
 		e string
