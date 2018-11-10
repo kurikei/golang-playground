@@ -6,7 +6,7 @@ if [ "$CI_PULL_REQUEST" = "" ]; then
   REVIEWDOG_ARG="-diff='git diff master'"
 fi
 
-golint $(go list ./${SRC_PATH}/...) | eval reviewdog -f=golint $REVIEWDOG_ARG
+golint ./cmd/... ./test/... | eval reviewdog -f=golint $REVIEWDOG_ARG
 
 golangci-lint run \
     --issues-exit-code 0 \
@@ -21,5 +21,5 @@ golangci-lint run \
     -E unparam \
     -E nakedret \
     -E prealloc \
-    ./${SRC_PATH}/... \
+    ./cmd/... ./test/... \
     | eval reviewdog -name=golangci-lint -f=checkstyle $REVIEWDOG_ARG

@@ -10,30 +10,28 @@ workflows:
 default_image: &default_image
   docker:
     - image:  circleci/golang:1-stretch
-      environment:
-        GOPATH: /home/circleci/project
-        SRC_PATH: src/golang-sandbox
 
 jobs:
   lint:
     <<: *default_image
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - mod-cache-{{ checksum "go.sum" }}
+            - mod-cache-
+      - run: go mod vendor
       - run:
-          name: add gotools to PATH
-          command: echo "PATH=$GOPATH/bin:$PATH" >> $BASH_ENV
-      - run:
-          name: install go packages for CI
-          command: |
-            go get -u golang.org/x/lint/golint \
-                      github.com/haya14busa/reviewdog/cmd/reviewdog \
-                      github.com/golangci/golangci-lint/cmd/golangci-lint
-      - run: cd $SRC_PATH && dep ensure -vendor-only
-      - type: cache-save
-        key: dep-cache-{{ checksum "src/golang-sandbox/Gopkg.lock" }}
-        paths:
-          - ${SRC_PATH}/vendor
-      - run: RESULT=$(gofmt -d -s ${SRC_PATH}/lib/) && echo "${RESULT}"; ! [ -n "${RESULT}" ]
+           name: install go packages for CI
+           command: |
+             go install golang.org/x/lint/golint \
+                        github.com/haya14busa/reviewdog/cmd/reviewdog \
+                        github.com/golangci/golangci-lint/cmd/golangci-lint
+      - save_cache:
+          key: mod-cache-{{ checksum "go.sum" }}
+          paths:
+            - vendor
+      - run: RESULT=$(gofmt -d -s ./cmd/ ./test/) && echo "${RESULT}"; ! [ -n "${RESULT}" ]
       - run:
           name: run reviewdog
           command: bin/ci/reviewdog.sh -reporter=github-pr-review
