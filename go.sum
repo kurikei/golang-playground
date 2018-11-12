@@ -22,7 +22,16 @@ github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5Kwzbycv
 github.com/fsnotify/fsnotify v1.4.7 h1:IXs+QLmnXW2CcXuY+8Mzv/fWEsPGWxqefPtCP5CnV9I=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
+github.com/go-critic/checkers v0.0.0-20181031185637-879460b6c936/go.mod h1:Cg5JCP9M6m93z6fecpRcVgD2lZf2RvPtb85ldjiShZc=
+github.com/go-lintpack/lintpack v0.0.0-20181105152233-7ff0297828fc/go.mod h1:1zNnkB6R9YD0l/ZxcCk0oOFbL9aEs6UtHeOyL+cpoHk=
 github.com/go-ole/go-ole v1.2.1/go.mod h1:7FAglXiTm7HKlQRDeOQ6ZNUHidzCWXuZWq/1dTyBNF8=
+github.com/go-toolsmith/astcast v0.0.0-20181028201508-b7a89ed70af1/go.mod h1:TEo3Ghaj7PsZawQHxT/oBvo4HK/sl1RcuUHDKTTju+o=
+github.com/go-toolsmith/astcopy v0.0.0-20180903214859-79b422d080c4/go.mod h1:c9CPdq2AzM8oPomdlPniEfPAC6g1s7NqZzODt8y6ib8=
+github.com/go-toolsmith/astequal v0.0.0-20180903214952-dcb477bfacd6/go.mod h1:H+xSiq0+LtiDC11+h1G32h7Of5O3CYFJ99GVbS5lDKY=
+github.com/go-toolsmith/astfmt v0.0.0-20180903215011-8f8ee99c3086/go.mod h1:mP93XdblcopXwlyN4X4uodxXQhldPGZbcEJIimQHrkg=
+github.com/go-toolsmith/astp v0.0.0-20180903215135-0af7e3c24f30/go.mod h1:SV2ur98SGypH1UjcPpCatrV5hPazG6+IfNHbkDXBRrk=
+github.com/go-toolsmith/strparse v0.0.0-20180903215201-830b6daa1241/go.mod h1:YI2nUKP9YGZnL/L1/DLFBfixrcjslWct4wyljWhSRy8=
+github.com/go-toolsmith/typep v0.0.0-20181030061450-d63dc7650676/go.mod h1:JSQCQMUPdRlMZFswiq3TGpNp1GMktqkR2Ns5AIQkATU=
 github.com/gobwas/glob v0.2.3 h1:A4xDbljILXROh+kObIiy5kIaPYD8e96x1tgBhUI5J+Y=
 github.com/gobwas/glob v0.2.3/go.mod h1:d3Ez4x06l9bZtSvzIay5+Yzi0fmZzPgnTbPcKjJAkT8=
 github.com/gogo/protobuf v1.0.0 h1:2jyBKDKU/8v3v2xVR2PtiWQviFUyiaGk2rpfyFT8rTM=
@@ -58,6 +67,8 @@ github.com/golangci/gofmt v0.0.0-20181105071733-f021c4179c82 h1:GzPqZCXdBR/5zaqM
 github.com/golangci/gofmt v0.0.0-20181105071733-f021c4179c82/go.mod h1:9qCChq59u/eW8im404Q2WWTrnBUQKjpNYKMbU4M7EFU=
 github.com/golangci/golangci-lint v1.11.3 h1:a8YbZ4DmOhcuGRL3E7/jc9UhkpnlNJQ7FIJdHPZynDM=
 github.com/golangci/golangci-lint v1.11.3/go.mod h1:HAEIsExr9/wT2mWEZ5ULKm5ZaArSSddtq0pinjO42t4=
+github.com/golangci/golangci-lint v1.12.2 h1:TZBt0R2qFW4SZPjI549tQmciIXPtMuYZmbS4loZvmaI=
+github.com/golangci/golangci-lint v1.12.2/go.mod h1:9Mdlb3LSCoxEJPexdOVimY9OIdG8fBKGoS9xvORuG9I=
 github.com/golangci/gosec v0.0.0-20180901114220-8afd9cbb6cfb h1:Bi7BYmZVg4C+mKGi8LeohcP2GGUl2XJD4xCkJoZSaYc=
 github.com/golangci/gosec v0.0.0-20180901114220-8afd9cbb6cfb/go.mod h1:ON/c2UR0VAAv6ZEAFKhjCLplESSmRFfZcDLASbI1GWo=
 github.com/golangci/govet v0.0.0-20180818181408-44ddbe260190 h1:SLIgprnxQNjBpkz55PK1vfb64/gKU/TgVi0obFw8Lec=
@@ -81,6 +92,7 @@ github.com/golangci/revgrep v0.0.0-20180526074752-d9c87f5ffaf0 h1:HVfrLniijszjS1
 github.com/golangci/revgrep v0.0.0-20180526074752-d9c87f5ffaf0/go.mod h1:qOQCunEYvmd/TLamH+7LlVccLvUH5kZNhbCgTHoBbp4=
 github.com/golangci/revgrep v0.0.0-20180812185044-276a5c0a1039 h1:XQKc8IYQOeRwVs36tDrEmTgDgP88d5iEURwpmtiAlOM=
 github.com/golangci/revgrep v0.0.0-20180812185044-276a5c0a1039/go.mod h1:qOQCunEYvmd/TLamH+7LlVccLvUH5kZNhbCgTHoBbp4=
+github.com/golangci/tools v0.0.0-20180902102414-2cefd77fef9b/go.mod h1:zgj6NOYXOC1cexsdtDceI4/mj3aXK4JOVg9AV3C5LWI=
 github.com/golangci/tools v0.0.0-20180902102414-ed64e33c8c8b h1:3a73k6ptEhiI9YA8cEe4i6nsLWQRjtBG97+tjhS+QBs=
 github.com/golangci/tools v0.0.0-20180902102414-ed64e33c8c8b/go.mod h1:zgj6NOYXOC1cexsdtDceI4/mj3aXK4JOVg9AV3C5LWI=
 github.com/golangci/tools v0.0.0-20181105070714-ed64e33c8c8b h1:xQiZgkihoRTQM9vo7L2P7r3Y6ADdepOBLsPK8WdlZG4=

@@ -7,7 +7,7 @@ require (
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/golangci/gocyclo v0.0.0-20180528144436-0a533e8fa43d // indirect
 	github.com/golangci/gofmt v0.0.0-20181105071733-f021c4179c82 // indirect
-	github.com/golangci/golangci-lint v1.11.3
+	github.com/golangci/golangci-lint v1.12.2
 	github.com/golangci/revgrep v0.0.0-20180812185044-276a5c0a1039 // indirect
 	github.com/golangci/tools v0.0.0-20181105070714-ed64e33c8c8b // indirect
 	github.com/golangci/unparam v0.0.0-20180902115109-7ad9dbcccc16 // indirect
