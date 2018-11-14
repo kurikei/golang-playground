@@ -1,6 +1,8 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.32.0 h1:DSt59WoyNcfAInilEpfvm2ugq8zvNyaHAm9MkzOwRQ4=
 cloud.google.com/go v0.32.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
+cloud.google.com/go v0.33.0 h1:1kNZapR5iXMPsPEca6Rqg+EN4/8/ZukNjMdwNQEllWk=
+cloud.google.com/go v0.33.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 firebase.google.com/go v3.4.0+incompatible h1:QjDi5xxlA0k4HtqXYLr4NMrtIfLrXOPlt7SOkLPefAE=
 firebase.google.com/go v3.4.0+incompatible/go.mod h1:xlah6XbEyW6tbfSklcfe5FHJIwjt8toICdV5Wh9ptHs=
 git.apache.org/thrift.git v0.0.0-20180902110319-2566ecd5d999/go.mod h1:fPE2ZNJGynbRyZ4dJvy6G277gSllfV2HJqblrnkyeyg=

@@ -1,7 +1,7 @@
 module github.com/kurikei/golang-sandbox
 
 require (
-	cloud.google.com/go v0.32.0
+	cloud.google.com/go v0.33.0
 	firebase.google.com/go v3.4.0+incompatible
 	github.com/StackExchange/wmi v0.0.0-20180725035823-b12b22c5341f // indirect
 	github.com/fatih/color v1.7.0 // indirect
