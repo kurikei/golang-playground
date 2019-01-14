@@ -23,9 +23,11 @@ github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMo
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/go-critic/checkers v0.0.0-20181031185637-879460b6c936 h1:z3p5plDo+NvU4XrN1qn3V7t46REsIchDEb2Czj0/FyA=
 github.com/go-critic/checkers v0.0.0-20181031185637-879460b6c936/go.mod h1:Cg5JCP9M6m93z6fecpRcVgD2lZf2RvPtb85ldjiShZc=
+github.com/go-critic/checkers v0.0.0-20181204210945-97246d3b3c67 h1:AhL5n4pH/qzefJ64+0RbymXZSBsvgbBaVJQCcjFaJPw=
 github.com/go-critic/checkers v0.0.0-20181204210945-97246d3b3c67/go.mod h1:Cg5JCP9M6m93z6fecpRcVgD2lZf2RvPtb85ldjiShZc=
 github.com/go-lintpack/lintpack v0.0.0-20181105152233-7ff0297828fc h1:1WRIbHnQimY5g784lRFOa93tWZdssXVtOp/E2use7as=
 github.com/go-lintpack/lintpack v0.0.0-20181105152233-7ff0297828fc/go.mod h1:1zNnkB6R9YD0l/ZxcCk0oOFbL9aEs6UtHeOyL+cpoHk=
+github.com/go-lintpack/lintpack v0.5.1 h1:v5D/csM90cu5PANqkj1JcNZGX/mrr3Z2Wu7Q8KuFd9M=
 github.com/go-lintpack/lintpack v0.5.1/go.mod h1:NwZuYi2nUHho8XEIZ6SIxihrnPoqBTDqfpXvXAN0sXM=
 github.com/go-ole/go-ole v1.2.1/go.mod h1:7FAglXiTm7HKlQRDeOQ6ZNUHidzCWXuZWq/1dTyBNF8=
 github.com/go-toolsmith/astcast v0.0.0-20181028201508-b7a89ed70af1 h1:h+1eMw+tZAlgTVclcVN0/rdPaBI/RUzG0peblT6df+Q=
@@ -62,6 +64,7 @@ github.com/golangci/dupl v0.0.0-20180902072040-3e9179ac440a h1:w8hkcTqaFpzKqonE9
 github.com/golangci/dupl v0.0.0-20180902072040-3e9179ac440a/go.mod h1:ryS0uhF+x9jgbj/N71xsEqODy9BN81/GonCZiOzirOk=
 github.com/golangci/errcheck v0.0.0-20181003203344-1765131d5be5 h1:q7aCFiVt6gMxZseillOwgsyitdcxbqQz5oxA2rHIeMY=
 github.com/golangci/errcheck v0.0.0-20181003203344-1765131d5be5/go.mod h1:DbHgvLiFKX1Sh2T1w8Q/h4NAI8MHIpzCdnBUDTXU3I0=
+github.com/golangci/errcheck v0.0.0-20181003203344-ef45e06d44b6 h1:i2jIkQFb8RG45DuQs+ElyROY848cSJIoIkBM+7XXypA=
 github.com/golangci/errcheck v0.0.0-20181003203344-ef45e06d44b6/go.mod h1:DbHgvLiFKX1Sh2T1w8Q/h4NAI8MHIpzCdnBUDTXU3I0=
 github.com/golangci/go-misc v0.0.0-20180628070357-927a3d87b613 h1:WadunOE/TeHR8U7f0TXiJACHeU3cuFOXuKafw4rozqU=
 github.com/golangci/go-misc v0.0.0-20180628070357-927a3d87b613/go.mod h1:SyvUF2NxV+sN8upjjeVYr5W7tyxaT1JVtvhKhOn2ii8=
@@ -73,6 +76,7 @@ github.com/golangci/gocyclo v0.0.0-20180528134321-2becd97e67ee h1:J2XAy40+7yz70u
 github.com/golangci/gocyclo v0.0.0-20180528134321-2becd97e67ee/go.mod h1:ozx7R9SIwqmqf5pRP90DhR2Oay2UIjGuKheCBCNwAYU=
 github.com/golangci/gocyclo v0.0.0-20180528144436-0a533e8fa43d h1:pXTK/gkVNs7Zyy7WKgLXmpQ5bHTrq5GDsp8R9Qs67g0=
 github.com/golangci/gocyclo v0.0.0-20180528144436-0a533e8fa43d/go.mod h1:ozx7R9SIwqmqf5pRP90DhR2Oay2UIjGuKheCBCNwAYU=
+github.com/golangci/gofmt v0.0.0-20181105071733-0b8337e80d98 h1:ir6/L2ZOJfFrJlOTsuf/hlzdPuUwXV/VzkSlgS6f1vs=
 github.com/golangci/gofmt v0.0.0-20181105071733-0b8337e80d98/go.mod h1:9qCChq59u/eW8im404Q2WWTrnBUQKjpNYKMbU4M7EFU=
 github.com/golangci/gofmt v0.0.0-20181105071733-f021c4179c82 h1:GzPqZCXdBR/5zaqMWNsxRk60z16CaQjyytNTFpei3bw=
 github.com/golangci/gofmt v0.0.0-20181105071733-f021c4179c82/go.mod h1:9qCChq59u/eW8im404Q2WWTrnBUQKjpNYKMbU4M7EFU=
@@ -273,6 +277,7 @@ golang.org/x/tools v0.0.0-20180831211245-6c7e314b6563/go.mod h1:n7NCudcB/nEzxVGm
 golang.org/x/tools v0.0.0-20181109202920-92d8274bd7b8 h1:VIvcx91Sk7S/d0CZtYIbqRQSTs0PQsHUcIJTHECUaY4=
 golang.org/x/tools v0.0.0-20181109202920-92d8274bd7b8/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 golang.org/x/tools v0.0.0-20181117154741-2ddaf7f79a09/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
+golang.org/x/tools v0.0.0-20181220024903-92cdcd90bf52 h1:oOIe9Zzq27JsS/3ACpGF1HwWnWNflZWT/3EvM7mtcEk=
 golang.org/x/tools v0.0.0-20181220024903-92cdcd90bf52/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 google.golang.org/api v0.0.0-20180910000450-7ca32eb868bf/go.mod h1:4mhQ8q/RsB7i+udVvVy5NUi08OU8ZlA0gRVgrF7VFY0=
 google.golang.org/api v0.0.0-20181108001712-cfbc873f6b93 h1:TSNRyeWkPS9y+f2F+lO1Yfn9VaFA8MGMUPvn4dXqia0=
