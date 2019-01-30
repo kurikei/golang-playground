@@ -1,4 +1,4 @@
-module github.com/kurikei/golang-sandbox
+module github.com/kurikei/golang-playground
 
 require (
 	cloud.google.com/go v0.34.0
