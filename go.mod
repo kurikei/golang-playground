@@ -26,7 +26,7 @@ require (
 	github.com/spf13/cobra v0.0.3 // indirect
 	github.com/spf13/pflag v1.0.3 // indirect
 	github.com/spf13/viper v1.2.1 // indirect
-	github.com/stretchr/testify v1.2.2
+	github.com/stretchr/testify v1.3.0
 	github.com/xanzy/go-gitlab v0.11.5 // indirect
 	go.opencensus.io v0.18.0 // indirect
 	golang.org/x/crypto v0.0.0-20181106171534-e4dc69e5b2fd // indirect
