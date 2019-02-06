@@ -9,7 +9,7 @@ workflows:
 
 default_image: &default_image
   docker:
-    - image:  circleci/golang:1-stretch
+    - image:  circleci/golang:1.11.3-stretch
 
 jobs:
   lint:
