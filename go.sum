@@ -96,6 +96,8 @@ github.com/golangci/golangci-lint v1.13.2 h1:IYLycgGGHJB/Ho95mBdxr0+BqVwMhI3I/0h
 github.com/golangci/golangci-lint v1.13.2/go.mod h1:WCZfrlychHbpDuVsy/Oo9X6LCxB43YBaKbrVHfj8Vww=
 github.com/golangci/golangci-lint v1.14.0 h1:MCkzA8MpAcqMAOz/6pf+hP62tdKC+ng49Jk2ml1kE0o=
 github.com/golangci/golangci-lint v1.14.0/go.mod h1:35dsx5Hoe3V4+jk3X6u5N1FQF4Hllm+/o9yjQ2wwKkA=
+github.com/golangci/golangci-lint v1.15.0 h1:10HaIJnbSAjX+NsHxbBlKzG2Rf+pJqWfdHKMtfCgEiw=
+github.com/golangci/golangci-lint v1.15.0/go.mod h1:iEsyA2h6yMxPzFAlb/Q9UuXBrXIDtXkbUoukuqUAX/8=
 github.com/golangci/gosec v0.0.0-20180901114220-66fb7fc33547/go.mod h1:0qUabqiIQgfmlAmulqxyiGkkyF6/tOGSnY2cnPVwrzU=
 github.com/golangci/gosec v0.0.0-20180901114220-8afd9cbb6cfb h1:Bi7BYmZVg4C+mKGi8LeohcP2GGUl2XJD4xCkJoZSaYc=
 github.com/golangci/gosec v0.0.0-20180901114220-8afd9cbb6cfb/go.mod h1:ON/c2UR0VAAv6ZEAFKhjCLplESSmRFfZcDLASbI1GWo=
@@ -382,6 +384,7 @@ mvdan.cc/unparam v0.0.0-20190124213536-fbb59629db34/go.mod h1:H6SUd1XjIs+qQCyskX
 sourcegraph.com/sourcegraph/go-diff v0.0.0-20171119081133-3f415a150aec/go.mod h1:R09mWeb9JcPbO+A3cYDc11xjz0wp6r9+KnqdqROAoRU=
 sourcegraph.com/sourcegraph/go-diff v0.5.0 h1:eTiIR0CoWjGzJcnQ3OkhIl/b9GJovq4lSAVRt0ZFEG8=
 sourcegraph.com/sourcegraph/go-diff v0.5.0/go.mod h1:kuch7UrkMzY0X+p9CRK03kfuPQ2zzQcaEFbx8wA8rck=
+sourcegraph.com/sourcegraph/go-diff v0.5.1-0.20190210232911-dee78e514455/go.mod h1:kuch7UrkMzY0X+p9CRK03kfuPQ2zzQcaEFbx8wA8rck=
 sourcegraph.com/sqs/pbtypes v0.0.0-20160107090929-4d1b9dc7ffc3/go.mod h1:ketZ/q3QxT9HOBeFhu6RdvsftgpsbFHBF5Cas6cDKZ0=
 sourcegraph.com/sqs/pbtypes v0.0.0-20180604144634-d3ebe8f20ae4/go.mod h1:ketZ/q3QxT9HOBeFhu6RdvsftgpsbFHBF5Cas6cDKZ0=
 sourcegraph.com/sqs/pbtypes v1.0.0 h1:f7lAwqviDEGvON4kRv0o5V7FT/IQK+tbkF664XMbP3o=
