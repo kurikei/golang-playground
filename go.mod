@@ -2,7 +2,7 @@ module github.com/kurikei/golang-playground
 
 require (
 	cloud.google.com/go v0.37.0
-	firebase.google.com/go v3.6.0+incompatible
+	firebase.google.com/go v3.7.0+incompatible
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/golangci/gocyclo v0.0.0-20180528144436-0a533e8fa43d // indirect
 	github.com/golangci/golangci-lint v1.15.0
