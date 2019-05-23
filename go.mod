@@ -29,7 +29,7 @@ require (
 	golang.org/x/sys v0.0.0-20181107165924-66b7b1311ac8 // indirect
 	golang.org/x/tools v0.0.0-20181109202920-92d8274bd7b8 // indirect
 	google.golang.org/api v0.1.0
-	google.golang.org/grpc v1.20.1
+	google.golang.org/grpc v1.21.0
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	sourcegraph.com/sqs/pbtypes v1.0.0 // indirect
 )
