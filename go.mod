@@ -5,7 +5,7 @@ require (
 	firebase.google.com/go v3.6.0+incompatible
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/golangci/gocyclo v0.0.0-20180528144436-0a533e8fa43d // indirect
-	github.com/golangci/golangci-lint v1.15.0
+	github.com/golangci/golangci-lint v1.17.1
 	github.com/golangci/revgrep v0.0.0-20180812185044-276a5c0a1039 // indirect
 	github.com/golangci/tools v0.0.0-20181105070714-ed64e33c8c8b // indirect
 	github.com/golangci/unparam v0.0.0-20180902115109-7ad9dbcccc16 // indirect
